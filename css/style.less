@@ -1,0 +1,59 @@
+/*
+
+// Variables
+@themes: "../../src/themes";
+
+// Usage
+@import "@{themes}/tidal-wave.less";
+
+*/
+
+/* variaveis */
+@link-color: #FF0000;
+@link-color-2: yellow;
+@link-color-3: purple;
+@link-color-hover:  darken(@link-color, 10%);
+
+/* Funççoes */
+.radius(@valor-rad: 5px , @bold: normal){
+	border-radius: @valor-rad;
+	-moz-border-radius: @valor-rad;
+	-webkit-border-radius: @valor-rad;
+	-o-border-radius: @valor-rad;
+	font-weight: @bold;
+}
+
+/* estilos */
+h2{
+	a{
+		color: @link-color-3;
+
+		&:hover{
+			text-decoration: none;
+			color: green;
+			background-color: black;
+		}
+	}
+}
+
+a,
+.link {
+  color: @link-color;
+}
+
+p{
+	color: @link-color-2;
+	background-color: black;
+	padding: 10px;
+	.radius(20px, bold)
+}
+/*------------------------------------*/
+@my-selector: banner;
+
+// Usage
+.@{my-selector} {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	background-color: black;
+}
